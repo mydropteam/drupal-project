@@ -13,6 +13,10 @@
         {
             "type": "composer",
             "url": "https://packagist.drupal-composer.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/mydropteam/dropstart"
         }
     ],
     "require": {
@@ -42,6 +46,10 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
+        "psr-4": {
+            "Drupal\\DrupalProject\\": "tests/src",
+            "DrupalProject\\": "src"
+        },
         "classmap": [
             "scripts/composer/ScriptHandler.php"
         ]
