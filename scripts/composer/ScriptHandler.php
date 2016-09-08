@@ -56,6 +56,14 @@ class ScriptHandler {
       umask($oldmask);
       $event->getIO()->write("Create a sites/default/files directory with chmod 0777");
     }
+    
+    // Create the simpletest directory with chmod chmod 0777
+    if (!$fs->exists($root . '/sites/simpletest')) {
+      $oldmask = umask(0);
+      $fs->mkdir($root . '/sites/simpletest', 0777);
+      umask($oldmask);
+      $event->getIO()->write("Create a sites/simpletests directory with chmod 0777");
+    }
   }
 
   /**
