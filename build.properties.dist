@@ -82,7 +82,7 @@ behat.webdriver_url = http://localhost:4444/wd/hub
 behat.subcontexts.path = ${website.modules.dir}
 
 # The output format to use for Behat tests, either 'progress' or 'pretty'.
-behat.formatter.name = progress
+behat.formatter.name = pretty
 
 # The location of the test files.
 behat.files.path = ${behat.dir}/fixtures/files
