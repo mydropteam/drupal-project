@@ -41,7 +41,7 @@ drush.bin = ${project.basedir}/vendor/bin/drush
 phing.bin = ${project.basedir}/vendor/bin/phing
 
 # Files and directories inside the Drupal installation.
-website.drupal.dir = ${project.basedir}/web
+website.drupal.dir = ${project.basedir}/htdocs
 
 website.sites.dir = ${website.drupal.dir}/sites
 website.site.dir = ${website.drupal.sites.dir}/all
@@ -125,7 +125,7 @@ phpcs.global.config = ${project.basedir}/vendor/squizlabs/php_codesniffer/CodeSn
 phpcs.prepush.enable = 0
 
 # The source and destination paths of the git pre-push hook.
-phpcs.prepush.source = ${project.basedir}/vendor/pfrenssen/phpcs-pre-push/pre-push
+phpcs.prepush.source = ${project.basedir}/phpcs-pre-push/pre-push
 phpcs.prepush.destination = ${project.basedir}/.git/hooks/pre-push
 
 
