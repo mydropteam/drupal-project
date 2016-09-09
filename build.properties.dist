@@ -126,7 +126,7 @@ phpcs.prepush.enable = 0
 
 # The source and destination paths of the git pre-push hook.
 phpcs.prepush.source = ${project.basedir}/phpcs-pre-push/pre-push
-phpcs.prepush.destination = ${project.basedir}/../.git/hooks/pre-push
+phpcs.prepush.destination = ${project.basedir}/.git/hooks/pre-push
 
 
 # PHPUnit configuration

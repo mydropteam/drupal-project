@@ -64,9 +64,7 @@ class ScriptHandler {
       umask($oldmask);
       $event->getIO()->write("Create a sites/simpletests directory with chmod 0777");
     }
-    // Chown the project directory to the www-data user
-    $fs->chown($project_root, "www-data:www-data", TRUE);
-    $fs->chmod($project_root, "www-data:www-data", 0775);
+
   }
 
   /**
