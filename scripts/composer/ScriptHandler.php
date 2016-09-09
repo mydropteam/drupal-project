@@ -49,20 +49,31 @@ class ScriptHandler {
       $event->getIO()->write("Create a sites/default/services.yml file with chmod 0666");
     }
 
-    // Create the files directory with chmod 0777
+    // Create the files directory with chmod 2775
     if (!$fs->exists($root . '/sites/default/files')) {
       $oldmask = umask(0);
-      $fs->mkdir($root . '/sites/default/files', 0777);
+      $fs->mkdir($root . '/sites/default/files', 2775);
       umask($oldmask);
-      $event->getIO()->write("Create a sites/default/files directory with chmod 0777");
+      $event->getIO()->write("Create a sites/default/files directory with chmod 2775");
     }
     
-    // Create the simpletest directory with chmod chmod 0777
+    // Create the simpletest directory with chmod chmod 2775
     if (!$fs->exists($root . '/sites/simpletest')) {
       $oldmask = umask(0);
-      $fs->mkdir($root . '/sites/simpletest', 0777);
+      $fs->mkdir($root . '/sites/simpletest', 2775);
       umask($oldmask);
-      $event->getIO()->write("Create a sites/simpletests directory with chmod 0777");
+      $event->getIO()->write("Create a sites/simpletests directory with chmod 2775");
+    }
+    
+    //chmod of drupal-root and settings files, needed for local docker dev-environment
+    if ($fs->exists($root)) {
+      shell_exec('chmod -R 2775 ' . $root);
+    }
+    if ($fs->exists($root . '/sites/default/settings.php')) {
+      shell_exec('chmod -R 444 ' . $root . '/sites/default/settings.php');
+    }
+    if ($fs->exists($root . '/sites/default/.settings.local.php')) {
+      shell_exec('chmod -R 444 ' . $root . '/sites/default/.settings.local.php');
     }
 
   }
