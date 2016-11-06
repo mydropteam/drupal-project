@@ -14,26 +14,210 @@
             "type": "composer",
             "url": "https://packagist.drupal-composer.org"
         },
+
         {
-            "type": "vcs",
-            "url": "https://github.com/mydropteam/dropstart"
+            "type": "package",
+            "package": {
+                "name": "desandro/masonry",
+                "version": "3.3.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/desandro/masonry/archive/v3.3.1.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "desandro/imagesloaded",
+                "version": "3.1.8",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/desandro/imagesloaded/archive/v3.1.8.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "enyo/dropzone",
+                "version": "4.2.0",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/enyo/dropzone",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "recurser/jquery-simple-color",
+                "version": "master",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/recurser/jquery-simple-color",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "kenwheeler/slick",
+                "version": "master",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/kenwheeler/slick",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "gromo/jquery.scrollbar",
+                "version": "master",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/gromo/jquery.scrollbar",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "gdsmith/easing",
+                "version": "master",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/gdsmith/jquery.easing",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jquery/mousewheel",
+                "version": "master",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/jquery/jquery-mousewheel",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "furf/jquery-ui-touch-punch",
+                "version": "master",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/furf/jquery-ui-touch-punch",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "nolimits4web/swiper",
+                "version": "master",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/nolimits4web/swiper",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
         }
+
     ],
     "require": {
         "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "~1.0",
+        "enyo/dropzone": "4.2.0",
+        "recurser/jquery-simple-color": "master",
+        "kenwheeler/slick": "master",
+        "gdsmith/easing": "master",
+        "jquery/mousewheel": "master",
+        "furf/jquery-ui-touch-punch": "master",
+        "nolimits4web/swiper": "master",
+        "desandro/masonry": "3.3.1",
+        "desandro/imagesloaded": "3.1.8",
         "drupal-composer/drupal-scaffold": "^2.0.1",
         "drupal/coder": "~8.2.7",
         "drupal/console": "~1.0",
-        "drupal/core": "~8.0",
+        "drupal/ultimate_cron": "~8.2",
+        "drupal/core": "~8.1",
         "drush/drush": "~8.0",
-        "mydropteam/dropstart": "~1.0"
+        "drupal/admin_menu": "8.x",
+        "drupal/adminimal_theme": "~8.1",
+        "drupal/adminimal_admin_toolbar": "~8.1",
+        "drupal/admin_toolbar": "~8.1",
+        "drupal/better_formats": "~8.1",
+        "drupal/boolean_formatter": "~8.1",
+        "drupal/bootstrap": "~8.3",
+        "drupal/bootstrap_layouts": "~8.3",
+        "drupal/bootstrap_library": "~8.1",
+        "drupal/color_field": "~8.2",
+        "drupal/config_update": "~8.1",
+        "drupal/date": "8.*",
+        "drupal/draggableviews": "~8.1",
+        "drupal/ds": "~8.2",
+        "drupal/dropzonejs": "~8.1",
+        "drupal/entity": "~8.1",
+        "drupal/entity_embed": "~8.1",
+        "drupal/entity_browser": "~8.1",
+        "drupal/field_group": "~8.1",
+        "drupal/file_entity": "~8.2",
+        "drupal/file_browser": "~8.1",
+        "drupal/inline_entity_form": "~8.1",
+        "drupal/maxlength": "~8.1",
+        "drupal/media_entity": "~8.1",
+        "drupal/media_entity_image": "~8.1",
+        "drupal/memcache": "~8.2",
+        "drupal/migrate_plus": "~8.2",
+        "drupal/migrate_source_csv": "~8.2",
+        "drupal/migrate_tools": "~8.2",
+        "drupal/pathauto": "~8.1",
+        "drupal/redirect": "~8.1",
+        "drupal/restui": "~8.1",
+        "drupal/token": "~8.1",
+        "drupal/views_bootstrap": "8.*",
+        "drupal/country": "~8.1",
+        "drupal/recaptcha": "~8.2",
+        "drupal/better_exposed_filters": "~8.3",
+        "drupal/dropdown_language": "~8.1",
+        "drupal/sharethis": "~8.",
+        "drupal/easy_social": "~8.",
+        "drupal/social_media_links": "~8.",
+        "drupal/menu_link_attributes": "~8.",
+        "drupal/eu_cookie_compliance": "~8.",
+        "drupal/twig_field_value": "~8.1.1",
+        "drupal/slick": "~8.1.0",
+        "drupal/slick_views": "~8.1.0",
+        "gromo/jquery.scrollbar": "master"
     },
     "require-dev": {
         "behat/mink": "~1.7",
         "behat/mink-goutte-driver": "~1.2",
         "drupal/drupal-extension": "~3.0",
         "drupal/phingdrushtask": "dev-7.x-2.x",
+        "drupal/devel": "~8.1",
+        "drupal/masquerade": "~8.1",
         "jcalderonzumba/gastonjs": "~1.0.2",
         "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
         "mikey179/vfsStream": "~1.2",

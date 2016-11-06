@@ -1,0 +1,26 @@
+<project name="set-config-dir" default="set-config-dir">
+  
+  <!-- Set another directory for the configuration sync folder. -->
+  <target name="set-config-dir">
+      <if>
+          <available file="${website.settings.php}" type="file" property="website.settings.php.available" />
+          <then>
+              <chmod mode="0775" failonerror="false" verbose="true" quiet="false" file="${website.settings.php}" />
+              <reflexive>
+                  <fileset dir="${website.settings.dir}">
+                      <include pattern="settings.php" />
+                  </fileset>
+                  <filterchain>
+                      <replaceregexp>
+                          <regexp 
+                              pattern="\$config_directories\[\'sync\'\]\ =\ 'sites(.*)" 
+                              replace="\$config_directories['sync'] = '${website.config.dir}';" />
+                      </replaceregexp>
+                  </filterchain>
+              </reflexive>
+              <chmod mode="0444" failonerror="false" verbose="true" quiet="false" file="${website.settings.php}" />
+          </then>
+      </if>
+  </target>
+  
+</project>

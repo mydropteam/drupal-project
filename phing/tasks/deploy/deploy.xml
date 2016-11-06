@@ -1,0 +1,8 @@
+<project name="deploy" default="deploy">
+    <!-- Task deploy on developement. -->
+    <import file="phing/tasks/deploy/deploy-dev.xml"/>
+
+    <!-- Task deploy on staging. -->
+    <import file="phing/tasks/deploy/deploy-qa.xml"/>
+
+</project>

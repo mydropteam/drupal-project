@@ -26,7 +26,7 @@ cd some-dir
 
 ## Configuration
 
-Create a new file in the root of the project named `build.properties.local`
+Rename `example.build.properties.local` to `build.properties.local` under [root]/phing.
 
 This file will contain configuration which is unique to your development
 machine. This is mainly useful for specifying your database credentials and the
